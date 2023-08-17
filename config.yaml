@@ -31,6 +31,16 @@ tun:
   auto-detect-interface: true # conflict with interface-name
 
 proxies:
+  - name: hk0
+    server: hk0.mageia.online
+    skip-cert-verify: true
+    port: 443
+    type: vmess
+    uuid: EC99F2AD-F41C-4604-9C39-B5E7ACAF90BE
+    alterId: 0
+    cipher: auto
+    tls: true
+
   - name: sg3
     server: sg3.mageia.online
     skip-cert-verify: true
@@ -62,6 +72,7 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 60
     proxies:
+      - hk0
       - sg3
       - 🇺🇸 美国 CloudFlare节点
 
