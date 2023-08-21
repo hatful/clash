@@ -71,7 +71,6 @@ proxies:
     cipher: auto
     tls: true
 
-
 proxy-groups:
   - name: PROXY
     type: url-test
@@ -158,6 +157,7 @@ rules:
   - RULE-SET,reject,REJECT
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
+  - DOMAIN-KEYWORD,openai,sg3
   - RULE-SET,applications,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,icloud,DIRECT
