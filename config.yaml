@@ -61,6 +61,16 @@ proxies:
     cipher: auto
     tls: true
 
+  - name: us1
+    server: us1.mageia.online
+    skip-cert-verify: true
+    port: 443
+    type: vmess
+    uuid: EC99F2AD-F41C-4604-9C39-B5E7ACAF90BE
+    alterId: 0
+    cipher: auto
+    tls: true
+
   - name: sg3
     server: sg3.mageia.online
     skip-cert-verify: true
@@ -80,6 +90,7 @@ proxy-groups:
       - hk0
       - hk1
       - tw1
+      - us1
       - sg3
 
 rule-providers:
