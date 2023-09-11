@@ -1,6 +1,7 @@
 mixed-port: 1086
 mode: rule
 log-level: info
+allow-lan: true
 external-controller: 0.0.0.0:9090
 
 dns:
