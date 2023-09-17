@@ -155,7 +155,7 @@ rule-providers:
   tiktok:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Video/TikTok.yaml"
+    url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/tiktok.yaml"
     path: ./ruleset/tiktok.yaml
     interval: 86400
 
