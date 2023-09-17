@@ -99,14 +99,14 @@ rule-providers:
   direct:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/direct.yaml"
     path: ./ruleset/direct.yaml
     interval: 86400
 
   reject:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/reject.yaml"
     path: ./ruleset/reject.yaml
     interval: 86400
 
