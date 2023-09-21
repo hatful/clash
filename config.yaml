@@ -152,13 +152,15 @@ rule-providers:
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - DOMAIN-SUFFIX,mageia.site,DIRECT
-  - RULE-SET,direct,DIRECT
 
   - RULE-SET,tiktok,us1
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,reject,REJECT
+
   - DOMAIN-KEYWORD,openai,sg3
   - DOMAIN-KEYWORD,claude,us1
   - DOMAIN-KEYWORD,anthropic,us1
+  - DOMAIN-SUFFIX,mageia.site,DIRECT
+  - DOMAIN-SUFFIX,mageia.online,DIRECT
 
-  - RULE-SET,reject,REJECT
   - MATCH,PROXY
