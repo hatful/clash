@@ -152,6 +152,7 @@ rule-providers:
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
+  - DOMAIN-SUFFIX,mageia.site,DIRECT
   - RULE-SET,direct,DIRECT
 
   - RULE-SET,tiktok,us1
