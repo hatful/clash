@@ -33,6 +33,36 @@ tun:
   auto-detect-interface: true # conflict with interface-name
 
 proxies:
+  - {
+      "name": "HK_38",
+      "server": "156.245.8.144",
+      "type": "vmess",
+      "country": "HK",
+      "port": 42952,
+      "uuid": "63b4b829-7f01-4e26-b037-f04b1f098765",
+      "alterId": 64,
+      "cipher": "auto",
+      "network": "tcp",
+      "ws-path": "/",
+      "http-opts": {},
+      "h2-opts": {},
+      "skip-cert-verify": true,
+    }
+  - {
+      "name": "Relay_TW",
+      "server": "gamespeed-gateway-1.numastergame.com",
+      "type": "vmess",
+      "country": "TW",
+      "port": 11872,
+      "uuid": "0913b1ac-1f6c-436b-99b4-a5d6e343d025",
+      "alterId": 0,
+      "cipher": "auto",
+      "network": "tcp",
+      "ws-path": "/",
+      "http-opts": {},
+      "h2-opts": {},
+      "skip-cert-verify": true,
+    }
   - name: hk0
     server: hk0.mageia.online
     skip-cert-verify: true
@@ -89,6 +119,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 60
     proxies:
+      - HK_38
+      - Relay_TW
       - hk0
       - hk1
       - tw1
