@@ -150,17 +150,17 @@ rule-providers:
     interval: 86400
 
 rules:
-  - GEOIP,LAN,DIRECT
-  - GEOIP,CN,DIRECT
-
-  - RULE-SET,tiktok,us1
-  - RULE-SET,direct,DIRECT
   - RULE-SET,reject,REJECT
 
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - DOMAIN-SUFFIX,mageia.site,DIRECT
+  - DOMAIN-SUFFIX,mageia.online,DIRECT
+
+  - RULE-SET,tiktok,us1
   - DOMAIN-KEYWORD,openai,sg3
   - DOMAIN-KEYWORD,claude,us1
   - DOMAIN-KEYWORD,anthropic,us1
-  - DOMAIN-SUFFIX,mageia.site,DIRECT
-  - DOMAIN-SUFFIX,mageia.online,DIRECT
 
   - MATCH,PROXY
