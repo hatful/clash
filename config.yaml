@@ -124,6 +124,8 @@ rules:
 
   - RULE-SET,tiktok,us1
   - DOMAIN-KEYWORD,openai,sg3
+  - DOMAIN-KEYWORD,claude,us1
+  - DOMAIN-KEYWORD,anthropic,us1
 
   # - RULE-SET,reject,REJECT
   - MATCH,PROXY
