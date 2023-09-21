@@ -19,8 +19,6 @@ payload:
   - 'amp-api.apps.apple.com'
   - 'aod.itunes.apple.com'
   - 'api-edge.apps.apple.com'
-  - 'app-measurement-cn.com'
-  - 'app-measurement.com'
   - 'app-site-association.cdn-apple.com'
   - 'appldnld.apple.com'
   - 'appldnld.g.aaplimg.com'
