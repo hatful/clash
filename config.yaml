@@ -135,12 +135,12 @@ rule-providers:
     path: ./ruleset/direct.yaml
     interval: 86400
 
-  # reject:
-  #   type: http
-  #   behavior: domain
-  #   url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/reject.yaml"
-  #   path: ./ruleset/reject.yaml
-  #   interval: 86400
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/reject.yaml"
+    path: ./ruleset/reject.yaml
+    interval: 86400
 
   tiktok:
     type: http
@@ -159,5 +159,5 @@ rules:
   - DOMAIN-KEYWORD,claude,us1
   - DOMAIN-KEYWORD,anthropic,us1
 
-  # - RULE-SET,reject,REJECT
+  - RULE-SET,reject,REJECT
   - MATCH,PROXY
