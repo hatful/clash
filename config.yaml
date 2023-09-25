@@ -114,6 +114,11 @@ proxies:
     tls: true
 
 proxy-groups:
+  - name: US
+    type: select
+    proxies:
+      - us1
+
   - name: PROXY
     type: url-test
     url: https://www.gstatic.com/generate_204
@@ -124,7 +129,6 @@ proxy-groups:
       - hk0
       - hk1
       - tw1
-      - us1
       - sg3
 
 rule-providers:
@@ -149,6 +153,13 @@ rule-providers:
     path: ./ruleset/tiktok.yaml
     interval: 86400
 
+  openai:
+    type: http
+    behavior: domain
+    url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/openai.yaml"
+    path: ./ruleset/openai.yaml
+    interval: 86400
+
 rules:
   - RULE-SET,reject,REJECT
 
@@ -158,9 +169,11 @@ rules:
   - DOMAIN-SUFFIX,mageia.site,DIRECT
   - DOMAIN-SUFFIX,mageia.online,DIRECT
 
-  - RULE-SET,tiktok,us1
-  - DOMAIN-KEYWORD,openai,sg3
-  - DOMAIN-KEYWORD,claude,us1
-  - DOMAIN-KEYWORD,anthropic,us1
+  - RULE-SET,tiktok,US
+  - RULE-SET,openai,US
+
+  # - DOMAIN-KEYWORD,openai,US
+  # - DOMAIN-KEYWORD,claude,US
+  # - DOMAIN-KEYWORD,anthropic,US
 
   - MATCH,PROXY

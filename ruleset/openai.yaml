@@ -1,0 +1,5 @@
+payload:
+  - DOMAIN-KEYWORD,openai
+  - DOMAIN-KEYWORD,claude
+  - DOMAIN-KEYWORD,anthropic
+  - DOMAIN-KEYWORD,oaistatic
