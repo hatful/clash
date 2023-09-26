@@ -15,11 +15,11 @@ dns:
     - 8.8.8.8
   fake-ip-filter:
     - "*.mageia.site"
+    - "*.mageia.online"
     - "*.bitiiot.com"
     - "*.*.bitiiot.com"
     - "*.cs.work"
     - "*.*.cs.work"
-    - "*.mageia.online"
 
 tun:
   enable: true
@@ -135,28 +135,32 @@ rule-providers:
   direct:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/direct.yaml"
+    # url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/direct.yaml"
+    url: https://f.mageia.online/ruleset/direct.yaml
     path: ./ruleset/direct.yaml
     interval: 86400
 
   reject:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/reject.yaml"
+    # url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/reject.yaml"
+    url: https://f.mageia.online/ruleset/reject.yaml
     path: ./ruleset/reject.yaml
     interval: 86400
 
   tiktok:
     type: http
     behavior: domain
-    url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/tiktok.yaml"
+    # url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/tiktok.yaml"
+    url: https://f.mageia.online/ruleset/tiktok.yaml
     path: ./ruleset/tiktok.yaml
     interval: 86400
 
   ai:
     type: http
-    behavior: domain
-    url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/ai.yaml"
+    behavior: classical
+    # url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/ai.yaml"
+    url: https://f.mageia.online/ruleset/ai.yaml
     path: ./ruleset/ai.yaml
     interval: 86400
 
