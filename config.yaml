@@ -153,11 +153,11 @@ rule-providers:
     path: ./ruleset/tiktok.yaml
     interval: 86400
 
-  openai:
+  ai:
     type: http
     behavior: domain
-    url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/openai.yaml"
-    path: ./ruleset/openai.yaml
+    url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/ai.yaml"
+    path: ./ruleset/ai.yaml
     interval: 86400
 
 rules:
@@ -169,11 +169,7 @@ rules:
   - DOMAIN-SUFFIX,mageia.site,DIRECT
   - DOMAIN-SUFFIX,mageia.online,DIRECT
 
+  - RULE-SET,ai,US
   - RULE-SET,tiktok,US
-  - RULE-SET,openai,US
-
-  # - DOMAIN-KEYWORD,openai,US
-  # - DOMAIN-KEYWORD,claude,US
-  # - DOMAIN-KEYWORD,anthropic,US
 
   - MATCH,PROXY
