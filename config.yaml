@@ -136,7 +136,7 @@ rule-providers:
     type: http
     behavior: domain
     # url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/direct.yaml"
-    url: https://f.mageia.online/ruleset/direct.yaml
+    url: https://f.mageia.site/ruleset/direct.yaml
     path: ./ruleset/direct.yaml
     interval: 86400
 
@@ -144,7 +144,7 @@ rule-providers:
     type: http
     behavior: domain
     # url: "https://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/reject.yaml"
-    url: https://f.mageia.online/ruleset/reject.yaml
+    url: https://f.mageia.site/ruleset/reject.yaml
     path: ./ruleset/reject.yaml
     interval: 86400
 
@@ -152,7 +152,7 @@ rule-providers:
     type: http
     behavior: domain
     # url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/tiktok.yaml"
-    url: https://f.mageia.online/ruleset/tiktok.yaml
+    url: https://f.mageia.site/ruleset/tiktok.yaml
     path: ./ruleset/tiktok.yaml
     interval: 86400
 
@@ -160,7 +160,7 @@ rule-providers:
     type: http
     behavior: classical
     # url: "http://cdn.jsdelivr.net/gh/hatful/clash@main/ruleset/ai.yaml"
-    url: https://f.mageia.online/ruleset/ai.yaml
+    url: https://f.mageia.site/ruleset/ai.yaml
     path: ./ruleset/ai.yaml
     interval: 86400
 
