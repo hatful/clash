@@ -14,12 +14,9 @@ dns:
   fallback:
     - 8.8.8.8
   fake-ip-filter:
+    - "*.syncthing.net"
     - "*.mageia.site"
     - "*.mageia.online"
-    - "*.bitiiot.com"
-    - "*.*.bitiiot.com"
-    - "*.cs.work"
-    - "*.*.cs.work"
 
 tun:
   enable: true
@@ -124,8 +121,6 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - HK_38
-      - Relay_TW
       - hk0
       - hk1
       - tw1
@@ -156,6 +151,13 @@ rule-providers:
     path: ./ruleset/tiktok.yaml
     interval: 86400
 
+  proxy:
+    type: http
+    behavior: classical
+    url: https://f.mageia.site/ruleset/proxy.yaml
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
   ai:
     type: http
     behavior: classical
@@ -166,6 +168,7 @@ rule-providers:
 
 rules:
   - RULE-SET,reject,REJECT
+  - RULE-SET,proxy,PROXY
 
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
