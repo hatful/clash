@@ -168,6 +168,9 @@ rule-providers:
 
 rules:
   - RULE-SET,reject,REJECT
+  - RULE-SET,ai,US
+  - RULE-SET,tiktok,US
+
   - RULE-SET,proxy,PROXY
 
   - GEOIP,LAN,DIRECT
@@ -175,8 +178,5 @@ rules:
   - RULE-SET,direct,DIRECT
   - DOMAIN-SUFFIX,mageia.site,DIRECT
   - DOMAIN-SUFFIX,mageia.online,DIRECT
-
-  - RULE-SET,ai,US
-  - RULE-SET,tiktok,US
 
   - MATCH,PROXY
