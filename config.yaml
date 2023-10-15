@@ -122,7 +122,6 @@ proxy-groups:
     interval: 60
     proxies:
       - hk0
-      - hk1
       - tw1
       - sg3
 
