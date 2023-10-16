@@ -1,2 +1,2 @@
 payload:
-  - "*.doubleclick.net"
+  - DOMAIN-SUFFIX,doubleclick.net
