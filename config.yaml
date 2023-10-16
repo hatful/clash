@@ -30,48 +30,8 @@ tun:
   auto-detect-interface: true # conflict with interface-name
 
 proxies:
-  - {
-      "name": "HK_38",
-      "server": "156.245.8.144",
-      "type": "vmess",
-      "country": "HK",
-      "port": 42952,
-      "uuid": "63b4b829-7f01-4e26-b037-f04b1f098765",
-      "alterId": 64,
-      "cipher": "auto",
-      "network": "tcp",
-      "ws-path": "/",
-      "http-opts": {},
-      "h2-opts": {},
-      "skip-cert-verify": true,
-    }
-  - {
-      "name": "Relay_TW",
-      "server": "gamespeed-gateway-1.numastergame.com",
-      "type": "vmess",
-      "country": "TW",
-      "port": 11872,
-      "uuid": "0913b1ac-1f6c-436b-99b4-a5d6e343d025",
-      "alterId": 0,
-      "cipher": "auto",
-      "network": "tcp",
-      "ws-path": "/",
-      "http-opts": {},
-      "h2-opts": {},
-      "skip-cert-verify": true,
-    }
   - name: hk0
     server: hk0.mageia.online
-    skip-cert-verify: true
-    port: 443
-    type: vmess
-    uuid: EC99F2AD-F41C-4604-9C39-B5E7ACAF90BE
-    alterId: 0
-    cipher: auto
-    tls: true
-
-  - name: hk1
-    server: hk1.mageia.online
     skip-cert-verify: true
     port: 443
     type: vmess
@@ -100,30 +60,21 @@ proxies:
     cipher: auto
     tls: true
 
-  - name: sg3
-    server: sg3.mageia.online
-    skip-cert-verify: true
-    port: 443
-    type: vmess
-    uuid: EC99F2AD-F41C-4604-9C39-B5E7ACAF90BE
-    alterId: 0
-    cipher: auto
-    tls: true
-
 proxy-groups:
   - name: US
-    type: select
+    type: url-test
+    interval: 60
+    url: https://www.gstatic.com/generate_204
     proxies:
       - us1
 
   - name: PROXY
     type: url-test
-    url: https://www.gstatic.com/generate_204
     interval: 60
+    url: https://www.gstatic.com/generate_204
     proxies:
       - hk0
       - tw1
-      - sg3
 
 rule-providers:
   direct:
