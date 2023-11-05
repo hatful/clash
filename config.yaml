@@ -40,7 +40,7 @@ proxies:
     cipher: auto
     tls: true
   - name: tw2
-    server: tw1.mageia.online
+    server: tw2.mageia.online
     skip-cert-verify: true
     port: 443
     type: vmess
