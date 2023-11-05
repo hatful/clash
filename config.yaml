@@ -30,8 +30,8 @@ tun:
   auto-detect-interface: true # conflict with interface-name
 
 proxies:
-  - name: hk0
-    server: hk0.mageia.online
+  - name: tw1
+    server: tw1.mageia.online
     skip-cert-verify: true
     port: 443
     type: vmess
@@ -39,8 +39,7 @@ proxies:
     alterId: 0
     cipher: auto
     tls: true
-
-  - name: tw1
+  - name: tw2
     server: tw1.mageia.online
     skip-cert-verify: true
     port: 443
@@ -73,8 +72,8 @@ proxy-groups:
     interval: 60
     url: https://www.gstatic.com/generate_204
     proxies:
-      - hk0
       - tw1
+      - tw2
 
 rule-providers:
   direct:
