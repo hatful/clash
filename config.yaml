@@ -14,7 +14,7 @@ dns:
   fallback:
     - 8.8.8.8
   fake-ip-filter:
-    - "*.syncthing.net"
+    - "*.dianzhantech.com"
     - "*.mageia.site"
     - "*.mageia.online"
 
@@ -30,50 +30,23 @@ tun:
   auto-detect-interface: true # conflict with interface-name
 
 proxies:
-  - name: tw1
-    server: tw1.mageia.online
-    skip-cert-verify: true
+  - name: sg2
+    server: sg2.mageia.online
     port: 443
-    type: vmess
-    uuid: EC99F2AD-F41C-4604-9C39-B5E7ACAF90BE
-    alterId: 0
-    cipher: auto
-    tls: true
-  - name: tw2
-    server: tw2.mageia.online
-    skip-cert-verify: true
-    port: 443
-    type: vmess
-    uuid: EC99F2AD-F41C-4604-9C39-B5E7ACAF90BE
+    type: vless
+    uuid: fe753736-d090-3e99-ad85-bf8fe0555a77
     alterId: 0
     cipher: auto
     tls: true
 
-  - name: us1
-    server: us1.mageia.online
-    skip-cert-verify: true
-    port: 443
-    type: vmess
-    uuid: EC99F2AD-F41C-4604-9C39-B5E7ACAF90BE
-    alterId: 0
-    cipher: auto
-    tls: true
 
 proxy-groups:
-  - name: US
-    type: url-test
-    interval: 60
-    url: https://www.gstatic.com/generate_204
-    proxies:
-      - us1
-
   - name: PROXY
     type: url-test
     interval: 60
     url: https://www.gstatic.com/generate_204
     proxies:
-      - tw1
-      - tw2
+      - sg2
 
 rule-providers:
   direct:
@@ -90,12 +63,6 @@ rule-providers:
     path: ./ruleset/reject.yaml
     interval: 86400
 
-  tiktok:
-    type: http
-    behavior: classical
-    url: https://f.mageia.site/ruleset/tiktok.yaml
-    path: ./ruleset/tiktok.yaml
-    interval: 86400
 
   proxy:
     type: http
@@ -104,17 +71,9 @@ rule-providers:
     path: ./ruleset/proxy.yaml
     interval: 86400
 
-  ai:
-    type: http
-    behavior: classical
-    url: https://f.mageia.site/ruleset/ai.yaml
-    path: ./ruleset/ai.yaml
-    interval: 86400
 
 rules:
   - RULE-SET,reject,REJECT
-  - RULE-SET,ai,US
-  - RULE-SET,tiktok,US
 
   - RULE-SET,proxy,PROXY
 
