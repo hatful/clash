@@ -110,6 +110,7 @@ proxy-groups:
   type: select
   proxies:
     - '🇺🇲 V3-PRO 美国02 8x'
+    - '🇸🇬 V3-PRO 新加坡05 | 8x 原生IP'
 
 - name: '🍃 Proxies'
   type: select
@@ -401,7 +402,6 @@ proxy-groups:
 - name: '👔 LinkedIn'
   type: select
   proxies:
-    - DIRECT
     - '🍃 Proxies'
     - 'V1-PRO 波兰01 隧道 2x'
     - '🇷🇺 V1-俄罗斯01 CDN隧道 1.2x'
@@ -582,7 +582,7 @@ rules:
 - DOMAIN-SUFFIX,jsdelivr.net,🍃 Proxies
 
 # > ChatGPT
-- DOMAIN-KEYWORD,openai,GptProxies
+- DOMAIN-SUFFIX,openai.com,GptProxies
 - DOMAIN-KEYWORD,openaiapi,GptProxies
 - DOMAIN-KEYWORD,openaipublic,GptProxies
 - DOMAIN-SUFFIX,openai.com,GptProxies
@@ -736,6 +736,7 @@ rules:
 
 # China Area Network
 # > Microsoft
+- DOMAIN-SUFFIX,bing.com,🍂 Domestic
 - DOMAIN-SUFFIX,microsoft.com,🍂 Domestic
 - DOMAIN-SUFFIX,windows.net,🍂 Domestic
 - DOMAIN-SUFFIX,sfx.ms,🍂 Domestic
@@ -1151,7 +1152,6 @@ rules:
 - DOMAIN-SUFFIX,apartmentratings.com,🍃 Proxies
 - DOMAIN-SUFFIX,apartments.com,🍃 Proxies
 - DOMAIN-SUFFIX,bankmobilevibe.com,🍃 Proxies
-- DOMAIN-SUFFIX,bing.com,🍃 Proxies
 - DOMAIN-SUFFIX,booktopia.com.au,🍃 Proxies
 - DOMAIN-SUFFIX,centauro.com.br,🍃 Proxies
 - DOMAIN-SUFFIX,clearsurance.com,🍃 Proxies
