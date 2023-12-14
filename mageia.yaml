@@ -35,6 +35,17 @@ proxies:
     port: 443
     type: vmess
     uuid: fe753736-d090-3e99-ad85-bf8fe0555a77
+    skip-cert-verify: true
+    alterId: 0
+    cipher: auto
+    tls: true
+
+  - name: tw3
+    server: tw3.mageia.online
+    port: 443
+    type: vmess
+    uuid: fe753736-d090-3e99-ad85-bf8fe0555a77
+    skip-cert-verify: true
     alterId: 0
     cipher: auto
     tls: true
@@ -46,6 +57,7 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     proxies:
       - hk3
+      - tw3
 
 rule-providers:
   direct:
