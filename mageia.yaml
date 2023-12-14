@@ -30,15 +30,14 @@ tun:
   auto-detect-interface: true # conflict with interface-name
 
 proxies:
-  - name: sg2
-    server: sg2.mageia.online
+  - name: hk3
+    server: hk3.mageia.online
     port: 443
-    type: vless
+    type: vmess
     uuid: fe753736-d090-3e99-ad85-bf8fe0555a77
     alterId: 0
     cipher: auto
     tls: true
-
 
 proxy-groups:
   - name: PROXY
@@ -46,7 +45,7 @@ proxy-groups:
     interval: 60
     url: https://www.gstatic.com/generate_204
     proxies:
-      - sg2
+      - hk3
 
 rule-providers:
   direct:
@@ -63,14 +62,12 @@ rule-providers:
     path: ./ruleset/reject.yaml
     interval: 86400
 
-
   proxy:
     type: http
     behavior: classical
     url: https://f.mageia.site/ruleset/proxy.yaml
     path: ./ruleset/proxy.yaml
     interval: 86400
-
 
 rules:
   - RULE-SET,reject,REJECT
