@@ -1,9 +1,3 @@
-#---------------------------------------------------#
-## 更新：2023-11-13 03:12:02
-## 感谢：https://github.com/Hackl0us/SS-Rule-Snippet
-## 链接：https://rss2024.biteb-sub.com/link/Hsh1Uw6OPBU8qM5R?clash=1
-#---------------------------------------------------#
-
 mixed-port: 1086
 redir-port: 7892 
 allow-lan: true
@@ -20,6 +14,7 @@ dns:
   fake-ip-filter:
     - "*.mageia.site"
     - "*.mageia.online"
+    - "*.dianzhantech.com"
 
 tun:
   enable: true
@@ -32,85 +27,75 @@ tun:
       # auto-route: true # auto set global route
   auto-detect-interface: true # conflict with interface-name
 
-
-# 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
 mode: rule
-
-# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
-# 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
-# log-level: silent
 log-level: info
-
-# Clash 的 RESTful API
 external-controller: '0.0.0.0:9090'
-
-# RESTful API 的口令
 secret: '' 
 
-# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
-# 参数应填写配置目录的相对路径或绝对路径。
-# external-ui: folder
-
-
 proxies:
-  - {"name":"V1-PRO 波兰01 隧道 2x","type":"vmess","server":"in06.myqq2024.org","port":64006,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"pl01.tencent.best"},"ws-opts":{"path":"/","headers":{"Host":"pl01.tencent.best"}}}
-  - {"name":"🇷🇺 V1-俄罗斯01 CDN隧道 1.2x","type":"vmess","server":"in06.myqq2024.org","port":64009,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇨🇦 V1-加拿大A CDN隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64013,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"ca-a.tencent.best"},"ws-opts":{"path":"/","headers":{"Host":"ca-a.tencent.best"}}}
-  - {"name":"🇮🇳 V1-印度01 CDN隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64051,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"in01.mycdn888.xyz"},"ws-opts":{"path":"/","headers":{"Host":"in01.mycdn888.xyz"}}}
-  - {"name":"🇹🇼 V1-台湾01 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64098,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇹🇼 V1-台湾99 Hinet直连 速度随缘 0.5x","type":"vmess","server":"hinet-tw99.mynodes001.one","port":9092,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true}
-  - {"name":"🇹🇷 V1-土耳其 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64015,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇩🇪 V1-德国01 CDN隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64092,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"de01-cdn.airport-v2.com"},"ws-opts":{"path":"/","headers":{"Host":"de01-cdn.airport-v2.com"}}}
-  - {"name":"🇸🇬 V1-新加坡 隧道 均衡负载 动态IP 1.3x","type":"vmess","server":"in06.myqq2024.org","port":64012,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇯🇵 V1-日本98 隧道 3x","type":"vmess","server":"in06.myqq2024.org","port":64005,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"biteb-jp98-cdn.mynodes001.one"},"ws-opts":{"path":"/","headers":{"Host":"biteb-jp98-cdn.mynodes001.one"}}}
-  - {"name":"🇯🇵 V1-日本A 隧道 1.6x","type":"vmess","server":"in06.myqq2024.org","port":64011,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"jp-a-biteb.weibo-cdn.best"},"ws-opts":{"path":"/","headers":{"Host":"jp-a-biteb.weibo-cdn.best"}}}
-  - {"name":"V1-澳洲01 隧道 | 2x","type":"vmess","server":"in06.myqq2024.org","port":64003,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇺🇲 V1-美国01 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64014,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇺🇲 V1-美国03 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64016,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇬🇧 V1-英国01 CDN隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64091,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"uk01-cdn.airport-v2.com"},"ws-opts":{"path":"/","headers":{"Host":"uk01-cdn.airport-v2.com"}}}
-  - {"name":"🇰🇷 V1-韩国01 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64097,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇭🇰 V1-香港A 隧道 1.6x","type":"vmess","server":"in06.myqq2024.org","port":64099,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇭🇰 V1-香港HKBGP01 隧道 | 3x","type":"vmess","server":"in06.myqq2024.org","port":64096,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇭🇰 V1-香港HKT02 隧道 原生家宽 2x","type":"vmess","server":"in06.myqq2024.org","port":64004,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"hkt2-cdn.tencent.best"},"ws-opts":{"path":"/","headers":{"Host":"hkt2-cdn.tencent.best"}}}
-  - {"name":"🇭🇰 V1-香港HKT03 隧道 2x","type":"vmess","server":"in06.myqq2024.org","port":64082,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"hkt3-cdn.tencent.best"},"ws-opts":{"path":"/","headers":{"Host":"hkt3-cdn.tencent.best"}}}
-  - {"name":"🇨🇦 V2-PRO 加拿大B 3x","type":"vmess","server":"pro01.myqq2024.org","port":3314,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇹🇼 V2-PRO 台湾01 4x","type":"vmess","server":"pro01.myqq2024.org","port":3274,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇧🇷 V2-PRO 巴西01 7x","type":"vmess","server":"pro01.myqq2024.org","port":3244,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇩🇪 V2-PRO 德国01 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3184,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇯🇵 V2-PRO 日本A 4x","type":"vmess","server":"pro01.myqq2024.org","port":3304,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"V2-PRO 波兰01 6x","type":"vmess","server":"pro01.myqq2024.org","port":3014,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"V2-PRO 澳洲01 | 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3214,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇺🇲 V2-PRO 美国01 4x","type":"vmess","server":"pro01.myqq2024.org","port":3264,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇬🇧 V2-PRO 英国01 | 7x","type":"vmess","server":"iplc01.myqq2024.org","port":3154,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇭🇰 V2-PRO 香港A 4x","type":"vmess","server":"pro01.myqq2024.org","port":3284,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇭🇰 V2-PRO 香港B 4x","type":"vmess","server":"pro01.myqq2024.org","port":3294,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇹🇼 V2-台湾11 套娃 中继 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64094,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇧🇷 V2-巴西01 CDN隧道 3x","type":"vmess","server":"in06.myqq2024.org","port":64002,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"br01.tencent.best"},"ws-opts":{"path":"/","headers":{"Host":"br01.tencent.best"}}}
-  - {"name":"🇸🇬 V2-新加坡06 套娃 中继 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64093,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇦🇷 V2-阿根廷01 CDN隧道 冷门 2x","type":"vmess","server":"in06.myqq2024.org","port":64001,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"ag01-cdn.myn1des.com"},"ws-opts":{"path":"/","headers":{"Host":"ag01-cdn.myn1des.com"}}}
-  - {"name":"🇭🇰 V2-香港B 隧道 1.6x","type":"vmess","server":"in06.myqq2024.org","port":64010,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇭🇰 V2-香港FDC01 隧道 2x","type":"vmess","server":"in06.myqq2024.org","port":64090,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"🇷🇺 V3-PRO 俄罗斯02 | 7x","type":"vmess","server":"iplc01.myqq2024.org","port":3104,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"ru02.iepl.nbsd.us"},"ws-opts":{"path":"/","headers":{"Host":"ru02.iepl.nbsd.us"}},"tls":true,"skip-cert-verify":true}
-  - {"name":"🇮🇳 V3-PRO 印度01 4x","type":"vmess","server":"pro01.myqq2024.org","port":3254,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇹🇼 V3-PRO 台湾03 Hinet | 8x 原生IP","type":"vmess","server":"iplc01.myqq2024.org","port":3074,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"tw03.yaofan.in168.net"},"ws-opts":{"path":"/","headers":{"Host":"tw03.yaofan.in168.net"}},"tls":true,"skip-cert-verify":true}
-  - {"name":"🇹🇼 V3-PRO 台湾10 | 8x 原生IP","type":"vmess","server":"pro01.myqq2024.org","port":3224,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇸🇬 V3-PRO 新加坡03 | 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3044,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"sg03.li.nbsd.us"},"ws-opts":{"path":"/","headers":{"Host":"sg03.li.nbsd.us"}},"tls":true,"skip-cert-verify":true}
-  - {"name":"🇸🇬 V3-PRO 新加坡05 | 8x 原生IP","type":"vmess","server":"pro01.myqq2024.org","port":3054,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇯🇵 V3-PRO 日本98 8x","type":"vmess","server":"pro01.myqq2024.org","port":3234,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇺🇲 V3-PRO 美国02 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3034,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇰🇷 V3-PRO 韩国02 | 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3094,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇭🇰 V3-PRO 香港FDC01 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3174,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇭🇰 V3-PRO 香港HKBGP01 | 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3024,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP","type":"vmess","server":"iplc01.myqq2024.org","port":3114,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP","type":"vmess","server":"iplc01.myqq2024.org","port":3144,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
-  - {"name":"🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP","type":"vmess","server":"iplc01.myqq2024.org","port":3204,"uuid":"0c22fbe0-69dc-32b6-b4b5-2b2c44daa49c","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"hkt4-cdn-myip.airport-v2.com"},"ws-opts":{"path":"/","headers":{"Host":"hkt4-cdn-myip.airport-v2.com"}},"tls":true,"skip-cert-verify":true}
+  - {"name":"V1-PRO 波兰01 隧道 2x","type":"vmess","server":"in06.myqq2024.org","port":64006,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"pl01.tencent.best"},"ws-opts":{"path":"/","headers":{"Host":"pl01.tencent.best"}}}
+  - {"name":"🇷🇺 V1-俄罗斯01 CDN隧道 1.2x","type":"vmess","server":"in06.myqq2024.org","port":64009,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇨🇦 V1-加拿大A CDN隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64013,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇮🇳 V1-印度01 CDN隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64051,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"in01.mycdn888.xyz"},"ws-opts":{"path":"/","headers":{"Host":"in01.mycdn888.xyz"}}}
+  - {"name":"🇹🇼 V1-台湾01 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64098,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇹🇼 V1-台湾99 Hinet直连 速度随缘 0.5x","type":"vmess","server":"hinet-tw99.myfreenodes2024.xyz","port":9092,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true}
+  - {"name":"🇹🇷 V1-土耳其 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64015,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇩🇪 V1-德国01 CDN隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64092,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"de01-cdn.airport-v2.com"},"ws-opts":{"path":"/","headers":{"Host":"de01-cdn.airport-v2.com"}}}
+  - {"name":"🇸🇬 V1-新加坡 隧道 均衡负载 动态IP 1.3x","type":"vmess","server":"in06.myqq2024.org","port":64012,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇯🇵 V1-日本98 隧道 3x","type":"vmess","server":"in06.myqq2024.org","port":64005,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"biteb-jp98-cdn.mynodes001.one"},"ws-opts":{"path":"/","headers":{"Host":"biteb-jp98-cdn.mynodes001.one"}}}
+  - {"name":"🇯🇵 V1-日本A 隧道 1.6x","type":"vmess","server":"in06.myqq2024.org","port":64011,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"jp-a-biteb.weibo-cdn.best"},"ws-opts":{"path":"/","headers":{"Host":"jp-a-biteb.weibo-cdn.best"}}}
+  - {"name":"V1-澳洲01 隧道 | 2x","type":"vmess","server":"in06.myqq2024.org","port":64003,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇺🇲 V1-美国01 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64014,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇺🇲 V1-美国03 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64016,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇬🇧 V1-英国01 CDN隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64007,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇰🇷 V1-韩国01 隧道 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64097,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇭🇰 V1-香港A 隧道 1.6x","type":"vmess","server":"in06.myqq2024.org","port":64099,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇭🇰 V1-香港HKBGP01 隧道 | 3x","type":"vmess","server":"in06.myqq2024.org","port":64096,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇭🇰 V1-香港HKT02 隧道 原生家宽 2x","type":"vmess","server":"in06.myqq2024.org","port":64004,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"hkt2-cdn.tencent.best"},"ws-opts":{"path":"/","headers":{"Host":"hkt2-cdn.tencent.best"}}}
+  - {"name":"🇭🇰 V1-香港HKT03 隧道 2x","type":"vmess","server":"in06.myqq2024.org","port":64082,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"hkt3-cdn.tencent.best"},"ws-opts":{"path":"/","headers":{"Host":"hkt3-cdn.tencent.best"}}}
+  - {"name":"🇨🇦 V2-PRO 加拿大B 3x","type":"vmess","server":"pro01.myqq2024.org","port":3314,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇹🇼 V2-PRO 台湾01 4x","type":"vmess","server":"pro01.myqq2024.org","port":3274,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇧🇷 V2-PRO 巴西01 7x","type":"vmess","server":"pro01.myqq2024.org","port":3244,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇩🇪 V2-PRO 德国01 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3184,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇯🇵 V2-PRO 日本A 4x","type":"vmess","server":"pro01.myqq2024.org","port":3304,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"V2-PRO 波兰01 6x","type":"vmess","server":"pro01.myqq2024.org","port":3014,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"V2-PRO 澳洲01 | 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3214,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇺🇲 V2-PRO 美国01 4x","type":"vmess","server":"pro01.myqq2024.org","port":3264,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇬🇧 V2-PRO 英国01 | 6x","type":"vmess","server":"iplc01.myqq2024.org","port":3134,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇭🇰 V2-PRO 香港A 4x","type":"vmess","server":"pro01.myqq2024.org","port":3284,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇭🇰 V2-PRO 香港B 4x","type":"vmess","server":"pro01.myqq2024.org","port":3294,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇹🇼 V2-台湾11 套娃 中继 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64094,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇧🇷 V2-巴西01 CDN隧道 3x","type":"vmess","server":"in06.myqq2024.org","port":64002,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"br01.tencent.best"},"ws-opts":{"path":"/","headers":{"Host":"br01.tencent.best"}}}
+  - {"name":"🇸🇬 V2-新加坡06 套娃 中继 1.5x","type":"vmess","server":"in06.myqq2024.org","port":64093,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇦🇷 V2-阿根廷01 CDN隧道 冷门 2x","type":"vmess","server":"in06.myqq2024.org","port":64001,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"ag01-cdn.myn1des.com"},"ws-opts":{"path":"/","headers":{"Host":"ag01-cdn.myn1des.com"}}}
+  - {"name":"🇭🇰 V2-香港B 隧道 1.6x","type":"vmess","server":"in06.myqq2024.org","port":64010,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇭🇰 V2-香港FDC01 隧道 2x","type":"vmess","server":"in06.myqq2024.org","port":64090,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"🇷🇺 V3-PRO 俄罗斯02 | 7x","type":"vmess","server":"iplc01.myqq2024.org","port":3104,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"ru02.iepl.nbsd.us"},"ws-opts":{"path":"/","headers":{"Host":"ru02.iepl.nbsd.us"}},"tls":true,"skip-cert-verify":true}
+  - {"name":"🇮🇳 V3-PRO 印度01 4x","type":"vmess","server":"pro01.myqq2024.org","port":3254,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇹🇼 V3-PRO 台湾03 Hinet | 8x 原生IP","type":"vmess","server":"iplc01.myqq2024.org","port":3074,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"tw03.yaofan.in168.net"},"ws-opts":{"path":"/","headers":{"Host":"tw03.yaofan.in168.net"}},"tls":true,"skip-cert-verify":true}
+  - {"name":"🇹🇼 V3-PRO 台湾10 | 8x 原生IP","type":"vmess","server":"pro01.myqq2024.org","port":3224,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇸🇬 V3-PRO 新加坡03 | 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3044,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"sg03.li.nbsd.us"},"ws-opts":{"path":"/","headers":{"Host":"sg03.li.nbsd.us"}},"tls":true,"skip-cert-verify":true}
+  - {"name":"🇸🇬 V3-PRO 新加坡05 | 8x 原生IP","type":"vmess","server":"pro01.myqq2024.org","port":3054,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇯🇵 V3-PRO 日本98 8x","type":"vmess","server":"pro01.myqq2024.org","port":3234,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇺🇲 V3-PRO 美国02 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3034,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇰🇷 V3-PRO 韩国02 | 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3094,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇭🇰 V3-PRO 香港FDC01 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3174,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇭🇰 V3-PRO 香港HKBGP01 | 8x","type":"vmess","server":"iplc01.myqq2024.org","port":3024,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP","type":"vmess","server":"iplc01.myqq2024.org","port":3114,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP","type":"vmess","server":"iplc01.myqq2024.org","port":3144,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"tls":true,"skip-cert-verify":true}
+  - {"name":"🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP","type":"vmess","server":"iplc01.myqq2024.org","port":3204,"uuid":"e7a8269b-5ba6-32a3-9efc-aff235880baa","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/","ws-headers":{"Host":"hkt4-cdn-myip.airport-v2.com"},"ws-opts":{"path":"/","headers":{"Host":"hkt4-cdn-myip.airport-v2.com"}},"tls":true,"skip-cert-verify":true}
 
 proxy-groups:
-- name: GptProxies
-  type: select
+- name: USA
+  type: url-test
+  interval: 60
+  url: https://www.gstatic.com/generate_204
   proxies:
+    - '🇺🇲 V1-美国01 隧道 1.5x'
+    - '🇺🇲 V1-美国03 隧道 1.5x'
+    - '🇺🇲 V2-PRO 美国01 4x'
     - '🇺🇲 V3-PRO 美国02 8x'
-    - '🇸🇬 V3-PRO 新加坡05 | 8x 原生IP'
+
 
 - name: '🍃 Proxies'
   type: select
@@ -144,7 +129,7 @@ proxy-groups:
     - 'V2-PRO 波兰01 6x'
     - 'V2-PRO 澳洲01 | 8x'
     - '🇺🇲 V2-PRO 美国01 4x'
-    - '🇬🇧 V2-PRO 英国01 | 7x'
+    - '🇬🇧 V2-PRO 英国01 | 6x'
     - '🇭🇰 V2-PRO 香港A 4x'
     - '🇭🇰 V2-PRO 香港B 4x'
     - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
@@ -167,14 +152,14 @@ proxy-groups:
     - '🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP'
-
-- name: '🍂 Domestic'
+-
+  name: '🍂 Domestic'
   type: select
   proxies:
     - DIRECT
     - '🍃 Proxies'
-
-- name: '💬 Telegram'
+-
+  name: '💬 Telegram'
   type: select
   proxies:
     - '🍃 Proxies'
@@ -206,7 +191,7 @@ proxy-groups:
     - 'V2-PRO 波兰01 6x'
     - 'V2-PRO 澳洲01 | 8x'
     - '🇺🇲 V2-PRO 美国01 4x'
-    - '🇬🇧 V2-PRO 英国01 | 7x'
+    - '🇬🇧 V2-PRO 英国01 | 6x'
     - '🇭🇰 V2-PRO 香港A 4x'
     - '🇭🇰 V2-PRO 香港B 4x'
     - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
@@ -229,8 +214,8 @@ proxy-groups:
     - '🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP'
-
-- name: '👹 YouTube'
+-
+  name: '👹 YouTube'
   type: select
   proxies:
     - '🍃 Proxies'
@@ -262,7 +247,7 @@ proxy-groups:
     - 'V2-PRO 波兰01 6x'
     - 'V2-PRO 澳洲01 | 8x'
     - '🇺🇲 V2-PRO 美国01 4x'
-    - '🇬🇧 V2-PRO 英国01 | 7x'
+    - '🇬🇧 V2-PRO 英国01 | 6x'
     - '🇭🇰 V2-PRO 香港A 4x'
     - '🇭🇰 V2-PRO 香港B 4x'
     - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
@@ -285,8 +270,8 @@ proxy-groups:
     - '🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP'
-
-- name: '🍿 Netflix'
+-
+  name: '🍿 Netflix'
   type: select
   proxies:
     - '🍃 Proxies'
@@ -318,7 +303,7 @@ proxy-groups:
     - 'V2-PRO 波兰01 6x'
     - 'V2-PRO 澳洲01 | 8x'
     - '🇺🇲 V2-PRO 美国01 4x'
-    - '🇬🇧 V2-PRO 英国01 | 7x'
+    - '🇬🇧 V2-PRO 英国01 | 6x'
     - '🇭🇰 V2-PRO 香港A 4x'
     - '🇭🇰 V2-PRO 香港B 4x'
     - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
@@ -341,121 +326,8 @@ proxy-groups:
     - '🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP'
-
-- name: '💳 PayPal'
-  type: select
-  proxies:
-    - DIRECT
-    - '🍃 Proxies'
-    - 'V1-PRO 波兰01 隧道 2x'
-    - '🇷🇺 V1-俄罗斯01 CDN隧道 1.2x'
-    - '🇨🇦 V1-加拿大A CDN隧道 1.5x'
-    - '🇮🇳 V1-印度01 CDN隧道 1.5x'
-    - '🇹🇼 V1-台湾01 隧道 1.5x'
-    - '🇹🇼 V1-台湾99 Hinet直连 速度随缘 0.5x'
-    - '🇹🇷 V1-土耳其 隧道 1.5x'
-    - '🇩🇪 V1-德国01 CDN隧道 1.5x'
-    - '🇸🇬 V1-新加坡 隧道 均衡负载 动态IP 1.3x'
-    - '🇯🇵 V1-日本98 隧道 3x'
-    - '🇯🇵 V1-日本A 隧道 1.6x'
-    - 'V1-澳洲01 隧道 | 2x'
-    - '🇺🇲 V1-美国01 隧道 1.5x'
-    - '🇺🇲 V1-美国03 隧道 1.5x'
-    - '🇬🇧 V1-英国01 CDN隧道 1.5x'
-    - '🇰🇷 V1-韩国01 隧道 1.5x'
-    - '🇭🇰 V1-香港A 隧道 1.6x'
-    - '🇭🇰 V1-香港HKBGP01 隧道 | 3x'
-    - '🇭🇰 V1-香港HKT02 隧道 原生家宽 2x'
-    - '🇭🇰 V1-香港HKT03 隧道 2x'
-    - '🇨🇦 V2-PRO 加拿大B 3x'
-    - '🇹🇼 V2-PRO 台湾01 4x'
-    - '🇧🇷 V2-PRO 巴西01 7x'
-    - '🇩🇪 V2-PRO 德国01 8x'
-    - '🇯🇵 V2-PRO 日本A 4x'
-    - 'V2-PRO 波兰01 6x'
-    - 'V2-PRO 澳洲01 | 8x'
-    - '🇺🇲 V2-PRO 美国01 4x'
-    - '🇬🇧 V2-PRO 英国01 | 7x'
-    - '🇭🇰 V2-PRO 香港A 4x'
-    - '🇭🇰 V2-PRO 香港B 4x'
-    - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
-    - '🇧🇷 V2-巴西01 CDN隧道 3x'
-    - '🇸🇬 V2-新加坡06 套娃 中继 1.5x'
-    - '🇦🇷 V2-阿根廷01 CDN隧道 冷门 2x'
-    - '🇭🇰 V2-香港B 隧道 1.6x'
-    - '🇭🇰 V2-香港FDC01 隧道 2x'
-    - '🇷🇺 V3-PRO 俄罗斯02 | 7x'
-    - '🇮🇳 V3-PRO 印度01 4x'
-    - '🇹🇼 V3-PRO 台湾03 Hinet | 8x 原生IP'
-    - '🇹🇼 V3-PRO 台湾10 | 8x 原生IP'
-    - '🇸🇬 V3-PRO 新加坡03 | 8x'
-    - '🇸🇬 V3-PRO 新加坡05 | 8x 原生IP'
-    - '🇯🇵 V3-PRO 日本98 8x'
-    - '🇺🇲 V3-PRO 美国02 8x'
-    - '🇰🇷 V3-PRO 韩国02 | 8x'
-    - '🇭🇰 V3-PRO 香港FDC01 8x'
-    - '🇭🇰 V3-PRO 香港HKBGP01 | 8x'
-    - '🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP'
-    - '🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP'
-    - '🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP'
-
-- name: '👔 LinkedIn'
-  type: select
-  proxies:
-    - '🍃 Proxies'
-    - 'V1-PRO 波兰01 隧道 2x'
-    - '🇷🇺 V1-俄罗斯01 CDN隧道 1.2x'
-    - '🇨🇦 V1-加拿大A CDN隧道 1.5x'
-    - '🇮🇳 V1-印度01 CDN隧道 1.5x'
-    - '🇹🇼 V1-台湾01 隧道 1.5x'
-    - '🇹🇼 V1-台湾99 Hinet直连 速度随缘 0.5x'
-    - '🇹🇷 V1-土耳其 隧道 1.5x'
-    - '🇩🇪 V1-德国01 CDN隧道 1.5x'
-    - '🇸🇬 V1-新加坡 隧道 均衡负载 动态IP 1.3x'
-    - '🇯🇵 V1-日本98 隧道 3x'
-    - '🇯🇵 V1-日本A 隧道 1.6x'
-    - 'V1-澳洲01 隧道 | 2x'
-    - '🇺🇲 V1-美国01 隧道 1.5x'
-    - '🇺🇲 V1-美国03 隧道 1.5x'
-    - '🇬🇧 V1-英国01 CDN隧道 1.5x'
-    - '🇰🇷 V1-韩国01 隧道 1.5x'
-    - '🇭🇰 V1-香港A 隧道 1.6x'
-    - '🇭🇰 V1-香港HKBGP01 隧道 | 3x'
-    - '🇭🇰 V1-香港HKT02 隧道 原生家宽 2x'
-    - '🇭🇰 V1-香港HKT03 隧道 2x'
-    - '🇨🇦 V2-PRO 加拿大B 3x'
-    - '🇹🇼 V2-PRO 台湾01 4x'
-    - '🇧🇷 V2-PRO 巴西01 7x'
-    - '🇩🇪 V2-PRO 德国01 8x'
-    - '🇯🇵 V2-PRO 日本A 4x'
-    - 'V2-PRO 波兰01 6x'
-    - 'V2-PRO 澳洲01 | 8x'
-    - '🇺🇲 V2-PRO 美国01 4x'
-    - '🇬🇧 V2-PRO 英国01 | 7x'
-    - '🇭🇰 V2-PRO 香港A 4x'
-    - '🇭🇰 V2-PRO 香港B 4x'
-    - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
-    - '🇧🇷 V2-巴西01 CDN隧道 3x'
-    - '🇸🇬 V2-新加坡06 套娃 中继 1.5x'
-    - '🇦🇷 V2-阿根廷01 CDN隧道 冷门 2x'
-    - '🇭🇰 V2-香港B 隧道 1.6x'
-    - '🇭🇰 V2-香港FDC01 隧道 2x'
-    - '🇷🇺 V3-PRO 俄罗斯02 | 7x'
-    - '🇮🇳 V3-PRO 印度01 4x'
-    - '🇹🇼 V3-PRO 台湾03 Hinet | 8x 原生IP'
-    - '🇹🇼 V3-PRO 台湾10 | 8x 原生IP'
-    - '🇸🇬 V3-PRO 新加坡03 | 8x'
-    - '🇸🇬 V3-PRO 新加坡05 | 8x 原生IP'
-    - '🇯🇵 V3-PRO 日本98 8x'
-    - '🇺🇲 V3-PRO 美国02 8x'
-    - '🇰🇷 V3-PRO 韩国02 | 8x'
-    - '🇭🇰 V3-PRO 香港FDC01 8x'
-    - '🇭🇰 V3-PRO 香港HKBGP01 | 8x'
-    - '🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP'
-    - '🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP'
-    - '🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP'
-
-- name: '🍎 Apple Service'
+-
+  name: '💳 PayPal'
   type: select
   proxies:
     - DIRECT
@@ -488,7 +360,7 @@ proxy-groups:
     - 'V2-PRO 波兰01 6x'
     - 'V2-PRO 澳洲01 | 8x'
     - '🇺🇲 V2-PRO 美国01 4x'
-    - '🇬🇧 V2-PRO 英国01 | 7x'
+    - '🇬🇧 V2-PRO 英国01 | 6x'
     - '🇭🇰 V2-PRO 香港A 4x'
     - '🇭🇰 V2-PRO 香港B 4x'
     - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
@@ -511,14 +383,128 @@ proxy-groups:
     - '🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP'
     - '🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP'
-
-- name: '☁️ Others'
+-
+  name: '👔 LinkedIn'
+  type: select
+  proxies:
+    # - DIRECT
+    - '🍃 Proxies'
+    - 'V1-PRO 波兰01 隧道 2x'
+    - '🇷🇺 V1-俄罗斯01 CDN隧道 1.2x'
+    - '🇨🇦 V1-加拿大A CDN隧道 1.5x'
+    - '🇮🇳 V1-印度01 CDN隧道 1.5x'
+    - '🇹🇼 V1-台湾01 隧道 1.5x'
+    - '🇹🇼 V1-台湾99 Hinet直连 速度随缘 0.5x'
+    - '🇹🇷 V1-土耳其 隧道 1.5x'
+    - '🇩🇪 V1-德国01 CDN隧道 1.5x'
+    - '🇸🇬 V1-新加坡 隧道 均衡负载 动态IP 1.3x'
+    - '🇯🇵 V1-日本98 隧道 3x'
+    - '🇯🇵 V1-日本A 隧道 1.6x'
+    - 'V1-澳洲01 隧道 | 2x'
+    - '🇺🇲 V1-美国01 隧道 1.5x'
+    - '🇺🇲 V1-美国03 隧道 1.5x'
+    - '🇬🇧 V1-英国01 CDN隧道 1.5x'
+    - '🇰🇷 V1-韩国01 隧道 1.5x'
+    - '🇭🇰 V1-香港A 隧道 1.6x'
+    - '🇭🇰 V1-香港HKBGP01 隧道 | 3x'
+    - '🇭🇰 V1-香港HKT02 隧道 原生家宽 2x'
+    - '🇭🇰 V1-香港HKT03 隧道 2x'
+    - '🇨🇦 V2-PRO 加拿大B 3x'
+    - '🇹🇼 V2-PRO 台湾01 4x'
+    - '🇧🇷 V2-PRO 巴西01 7x'
+    - '🇩🇪 V2-PRO 德国01 8x'
+    - '🇯🇵 V2-PRO 日本A 4x'
+    - 'V2-PRO 波兰01 6x'
+    - 'V2-PRO 澳洲01 | 8x'
+    - '🇺🇲 V2-PRO 美国01 4x'
+    - '🇬🇧 V2-PRO 英国01 | 6x'
+    - '🇭🇰 V2-PRO 香港A 4x'
+    - '🇭🇰 V2-PRO 香港B 4x'
+    - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
+    - '🇧🇷 V2-巴西01 CDN隧道 3x'
+    - '🇸🇬 V2-新加坡06 套娃 中继 1.5x'
+    - '🇦🇷 V2-阿根廷01 CDN隧道 冷门 2x'
+    - '🇭🇰 V2-香港B 隧道 1.6x'
+    - '🇭🇰 V2-香港FDC01 隧道 2x'
+    - '🇷🇺 V3-PRO 俄罗斯02 | 7x'
+    - '🇮🇳 V3-PRO 印度01 4x'
+    - '🇹🇼 V3-PRO 台湾03 Hinet | 8x 原生IP'
+    - '🇹🇼 V3-PRO 台湾10 | 8x 原生IP'
+    - '🇸🇬 V3-PRO 新加坡03 | 8x'
+    - '🇸🇬 V3-PRO 新加坡05 | 8x 原生IP'
+    - '🇯🇵 V3-PRO 日本98 8x'
+    - '🇺🇲 V3-PRO 美国02 8x'
+    - '🇰🇷 V3-PRO 韩国02 | 8x'
+    - '🇭🇰 V3-PRO 香港FDC01 8x'
+    - '🇭🇰 V3-PRO 香港HKBGP01 | 8x'
+    - '🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP'
+    - '🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP'
+    - '🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP'
+-
+  name: '🍎 Apple Service'
+  type: select
+  proxies:
+    - DIRECT
+    - '🍃 Proxies'
+    - 'V1-PRO 波兰01 隧道 2x'
+    - '🇷🇺 V1-俄罗斯01 CDN隧道 1.2x'
+    - '🇨🇦 V1-加拿大A CDN隧道 1.5x'
+    - '🇮🇳 V1-印度01 CDN隧道 1.5x'
+    - '🇹🇼 V1-台湾01 隧道 1.5x'
+    - '🇹🇼 V1-台湾99 Hinet直连 速度随缘 0.5x'
+    - '🇹🇷 V1-土耳其 隧道 1.5x'
+    - '🇩🇪 V1-德国01 CDN隧道 1.5x'
+    - '🇸🇬 V1-新加坡 隧道 均衡负载 动态IP 1.3x'
+    - '🇯🇵 V1-日本98 隧道 3x'
+    - '🇯🇵 V1-日本A 隧道 1.6x'
+    - 'V1-澳洲01 隧道 | 2x'
+    - '🇺🇲 V1-美国01 隧道 1.5x'
+    - '🇺🇲 V1-美国03 隧道 1.5x'
+    - '🇬🇧 V1-英国01 CDN隧道 1.5x'
+    - '🇰🇷 V1-韩国01 隧道 1.5x'
+    - '🇭🇰 V1-香港A 隧道 1.6x'
+    - '🇭🇰 V1-香港HKBGP01 隧道 | 3x'
+    - '🇭🇰 V1-香港HKT02 隧道 原生家宽 2x'
+    - '🇭🇰 V1-香港HKT03 隧道 2x'
+    - '🇨🇦 V2-PRO 加拿大B 3x'
+    - '🇹🇼 V2-PRO 台湾01 4x'
+    - '🇧🇷 V2-PRO 巴西01 7x'
+    - '🇩🇪 V2-PRO 德国01 8x'
+    - '🇯🇵 V2-PRO 日本A 4x'
+    - 'V2-PRO 波兰01 6x'
+    - 'V2-PRO 澳洲01 | 8x'
+    - '🇺🇲 V2-PRO 美国01 4x'
+    - '🇬🇧 V2-PRO 英国01 | 6x'
+    - '🇭🇰 V2-PRO 香港A 4x'
+    - '🇭🇰 V2-PRO 香港B 4x'
+    - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
+    - '🇧🇷 V2-巴西01 CDN隧道 3x'
+    - '🇸🇬 V2-新加坡06 套娃 中继 1.5x'
+    - '🇦🇷 V2-阿根廷01 CDN隧道 冷门 2x'
+    - '🇭🇰 V2-香港B 隧道 1.6x'
+    - '🇭🇰 V2-香港FDC01 隧道 2x'
+    - '🇷🇺 V3-PRO 俄罗斯02 | 7x'
+    - '🇮🇳 V3-PRO 印度01 4x'
+    - '🇹🇼 V3-PRO 台湾03 Hinet | 8x 原生IP'
+    - '🇹🇼 V3-PRO 台湾10 | 8x 原生IP'
+    - '🇸🇬 V3-PRO 新加坡03 | 8x'
+    - '🇸🇬 V3-PRO 新加坡05 | 8x 原生IP'
+    - '🇯🇵 V3-PRO 日本98 8x'
+    - '🇺🇲 V3-PRO 美国02 8x'
+    - '🇰🇷 V3-PRO 韩国02 | 8x'
+    - '🇭🇰 V3-PRO 香港FDC01 8x'
+    - '🇭🇰 V3-PRO 香港HKBGP01 | 8x'
+    - '🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP'
+    - '🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP'
+    - '🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP'
+-
+  name: '☁️ Others'
   type: select
   proxies:
     - '🍃 Proxies'
     - '🍂 Domestic'
-
-- name: '⭐️ Auto'
+-
+  name: '⭐️ Auto'
   type: url-test
   proxies:
     - 'V1-PRO 波兰01 隧道 2x'
@@ -548,7 +534,7 @@ proxy-groups:
     - 'V2-PRO 波兰01 6x'
     - 'V2-PRO 澳洲01 | 8x'
     - '🇺🇲 V2-PRO 美国01 4x'
-    - '🇬🇧 V2-PRO 英国01 | 7x'
+    - '🇬🇧 V2-PRO 英国01 | 6x'
     - '🇭🇰 V2-PRO 香港A 4x'
     - '🇭🇰 V2-PRO 香港B 4x'
     - '🇹🇼 V2-台湾11 套娃 中继 1.5x'
@@ -582,17 +568,17 @@ rules:
 - DOMAIN-SUFFIX,jsdelivr.net,🍃 Proxies
 
 # > ChatGPT
-- DOMAIN-SUFFIX,openai.com,GptProxies
-- DOMAIN-KEYWORD,openaiapi,GptProxies
-- DOMAIN-KEYWORD,openaipublic,GptProxies
-- DOMAIN-SUFFIX,openai.com,GptProxies
-- DOMAIN-SUFFIX,ai.com,GptProxies
-- DOMAIN-SUFFIX,openai.com,GptProxies
-- DOMAIN-SUFFIX,pay.openai.com,GptProxies
-- DOMAIN-SUFFIX,chat.openai.com,GptProxies
-- DOMAIN-SUFFIX,auth0.openai.com,GptProxies
-- DOMAIN-SUFFIX,platform.openai.com,GptProxies
-- DOMAIN-SUFFIX,openaicom.imgix.net,GptProxies
+- DOMAIN-KEYWORD,openai,USA
+- DOMAIN-KEYWORD,openaiapi,USA
+- DOMAIN-KEYWORD,openaipublic,USA
+- DOMAIN-SUFFIX,openai.com,USA
+- DOMAIN-SUFFIX,ai.com,USA
+- DOMAIN-SUFFIX,openai.com,USA
+- DOMAIN-SUFFIX,pay.openai.com,USA
+- DOMAIN-SUFFIX,chat.openai.com,USA
+- DOMAIN-SUFFIX,auth0.openai.com,USA
+- DOMAIN-SUFFIX,platform.openai.com,USA
+- DOMAIN-SUFFIX,openaicom.imgix.net,USA
 
 # (Global_TV)
 # > ABC
@@ -736,7 +722,6 @@ rules:
 
 # China Area Network
 # > Microsoft
-- DOMAIN-SUFFIX,bing.com,🍂 Domestic
 - DOMAIN-SUFFIX,microsoft.com,🍂 Domestic
 - DOMAIN-SUFFIX,windows.net,🍂 Domestic
 - DOMAIN-SUFFIX,sfx.ms,🍂 Domestic
@@ -1152,6 +1137,7 @@ rules:
 - DOMAIN-SUFFIX,apartmentratings.com,🍃 Proxies
 - DOMAIN-SUFFIX,apartments.com,🍃 Proxies
 - DOMAIN-SUFFIX,bankmobilevibe.com,🍃 Proxies
+- DOMAIN-SUFFIX,bing.com,🍃 Proxies
 - DOMAIN-SUFFIX,booktopia.com.au,🍃 Proxies
 - DOMAIN-SUFFIX,centauro.com.br,🍃 Proxies
 - DOMAIN-SUFFIX,clearsurance.com,🍃 Proxies
@@ -1426,3 +1412,4 @@ rules:
 - GEOIP,CN,🍂 Domestic
 
 - MATCH,☁️ Others
+
