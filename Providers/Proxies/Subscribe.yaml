@@ -1,0 +1,15 @@
+proxies:
+  - {name: 🇷🇴 V3-PRO 俄罗斯02 | 7x, server: iplc01.myqq2024.org, port: 3104, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇮🇳 V3-PRO 印度01 4x, server: pro01.myqq2024.org, port: 3254, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇷🇴 V3-PRO 台湾03 Hinet | 8x 原生IP, server: iplc01.myqq2024.org, port: 3074, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇷🇴 V3-PRO 台湾10 | 8x 原生IP, server: pro01.myqq2024.org, port: 3224, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇷🇴 V3-PRO 新加坡03 | 8x, server: iplc01.myqq2024.org, port: 3044, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sg03.li.nbsd.us}}}
+  - {name: 🇷🇴 V3-PRO 新加坡05 | 8x 原生IP, server: pro01.myqq2024.org, port: 3054, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇯🇵 V3-PRO 日本98 8x, server: pro01.myqq2024.org, port: 3234, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇷🇴 V3-PRO 美国02 8x, server: iplc01.myqq2024.org, port: 3034, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇰🇷 V3-PRO 韩国02 | 8x, server: iplc01.myqq2024.org, port: 3094, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇭🇰 V3-PRO 香港FDC01 8x, server: iplc01.myqq2024.org, port: 3174, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇭🇰 V3-PRO 香港HKBGP01 | 8x, server: iplc01.myqq2024.org, port: 3024, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇭🇰 V3-PRO 香港HKG01 | 8x 原生IP, server: iplc01.myqq2024.org, port: 3114, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇭🇰 V3-PRO 香港HKT01 | 8x 原生IP, server: iplc01.myqq2024.org, port: 3144, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+  - {name: 🇭🇰 V3-PRO 香港HKT04 | 8x 原生IP, server: iplc01.myqq2024.org, port: 3204, type: vmess, uuid: e7a8269b-5ba6-32a3-9efc-aff235880baa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hkt4-cdn-myip.airport-v2.com}}}
